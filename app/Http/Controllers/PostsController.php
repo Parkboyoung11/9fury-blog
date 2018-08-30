@@ -7,7 +7,7 @@ use App\Repositories\PostInterface;
 use App\Services\BreadcrumbService;
 use Illuminate\Http\Request;
 
-class PostController extends Controller
+class PostsController extends Controller
 {
     /**
      * Display a listing of the resource.
