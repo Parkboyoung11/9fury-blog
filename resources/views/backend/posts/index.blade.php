@@ -40,7 +40,7 @@
                                 <th>{{ __("Category") }}</th>
                                 <th>{{ __("Tags") }}</th>
                                 <th>{{ __("Published") }}</th>
-                                <th style="width: 40px">{{ __("Action") }}</th>
+                                <th>{{ __("Action") }}</th>
                             </tr>
 
                             @forelse($posts as $post)
@@ -51,8 +51,19 @@
                                     <td>{{ join(', ', $post->tags->pluck('name')->toArray()) }}</td>
                                     <td>{{ $post->is_publish ? __('Yes') : __('No') }}</td>
                                     <td>
-                                        <a class="btn btn-sm btn-warning"
-                                           href="{{ route('admin.posts.edit',$post->id) }}">Edit</a>
+                                        <a data-toggle="tooltip" title="Show" class="btn btn-sm btn-info" href="{{ route('admin.posts.show',$post->id) }}"> <i class="fa fa-eye"></i></a>
+                                        <a data-toggle="tooltip" title="Edit" class="btn btn-sm btn-warning"
+                                           href="{{ route('admin.posts.edit',$post->id) }}"><i class="fa fa-edit"></i></a>
+                                        <a data-toggle="tooltip" title="Delete" data-method="DELETE" data-confirm="{{ __("Are you sure?") }}"
+                                           data-token="{{ csrf_token() }}" class="btn btn-sm btn-danger"
+                                           href="{{ route('admin.posts.destroy',$post->id) }}"><i class="fa fa-trash"></i></a>
+                                        @if($post->is_publish)
+                                            <a data-toggle="tooltip" title="Unpublish" class="btn btn-sm btn-primary"
+                                               href="{{ route('admin.posts.unpublish',$post->id) }}"><i class="fa fa-upload"></i></a>
+                                        @else
+                                            <a data-toggle="tooltip" title="Publish" class="btn btn-sm btn-success"
+                                               href="{{ route('admin.posts.publish',$post->id) }}"><i class="fa fa-download"></i></a>
+                                        @endif
                                     </td>
                                 </tr>
                             @empty
@@ -70,4 +81,13 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('script')
+    <script src="{{ asset('js/laravel.js') }}"></script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
 @endsection

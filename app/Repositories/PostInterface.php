@@ -28,4 +28,8 @@ interface PostInterface
     public function getSortingColumnNameByKey($key);
 
     public function getSortingOrderNameByKey($key);
+
+    public function softDelete($id);
+
+    public function changeState($id);
 }

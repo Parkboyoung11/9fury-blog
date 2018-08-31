@@ -57,10 +57,10 @@ class PostRepository implements PostInterface
     {
         $query = $this->model->select();
         if (!is_null($parameters)) {
-            if(isset($parameters['column']) && isset($parameters['order'])){
-                $query = $query->orderBy($this->getSortingColumnNameByKey($parameters['column']),$this->getSortingOrderNameByKey($parameters['order']));
+            if (isset($parameters['column']) && isset($parameters['order'])) {
+                $query = $query->orderBy($this->getSortingColumnNameByKey($parameters['column']), $this->getSortingOrderNameByKey($parameters['order']));
             }
-            if(!empty($parameters['search'])){
+            if (!empty($parameters['search'])) {
                 $searchs = explode(' ', $parameters['search']);
                 foreach ($searchs as $search) {
                     $query = $query->where(function ($q) use ($search) {
@@ -71,6 +71,18 @@ class PostRepository implements PostInterface
             }
         }
         return $query->with('category', 'tags')->paginate($itemPerPage);
+    }
+
+    public function getSortingColumnNameByKey($key)
+    {
+        $fieldNames = array_keys($this->sortingColumns);
+        return $fieldNames[$key] ?: null;
+    }
+
+    public function getSortingOrderNameByKey($key)
+    {
+        $orderNames = array_keys($this->sortingOrders);
+        return $orderNames[$key] ?: null;
     }
 
     public function getSortingColumns()
@@ -84,15 +96,17 @@ class PostRepository implements PostInterface
         return array_values($this->sortingOrders);
     }
 
-    public function getSortingColumnNameByKey($key)
+    public function softDelete($id)
     {
-        $fieldNames = array_keys($this->sortingColumns);
-        return $fieldNames[$key] ?: null;
+        return $this->model->where('id', $id)->delete();
     }
 
-    public function getSortingOrderNameByKey($key)
+    public function changeState($id)
     {
-        $orderNames = array_keys($this->sortingOrders);
-        return $orderNames[$key] ?: null;
+        $post = $this->model->where('id', $id)->first();
+        if (!empty($post)) {
+            return $post->update(['is_publish' => abs((int)$post->is_publish - 1)]);
+        }
+        return false;
     }
 }
