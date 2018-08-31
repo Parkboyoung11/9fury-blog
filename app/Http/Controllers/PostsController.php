@@ -9,16 +9,28 @@ use Illuminate\Http\Request;
 
 class PostsController extends Controller
 {
+    public $post;
+    public $breadcrumb;
+    public function __construct(PostInterface $post, BreadcrumbService $breadcrumbService)
+    {
+        $this->post = $post;
+        $this->breadcrumb = $breadcrumbService;
+    }
+
     /**
      * Display a listing of the resource.
      *
-     * @param PostInterface $post
-     * @param BreadcrumbService $breadcrumbService
      * @return void
      */
-    public function index(PostInterface $post, BreadcrumbService $breadcrumbService)
+    public function index(Request $request)
     {
-        $data['breadcrumbs'] = $breadcrumbService->get('admin.dashboard.posts');
+        $data['columns'] = $this->post->getSortingColumns();
+        $data['orders'] = $this->post->getSortingOrders();
+        $data['column'] = $request->column ?: null ;
+        $data['order'] = $request->order ?: null ;
+        $data['search'] = $request->search ?: null;
+        $data['posts'] = $this->post->paginate(ITEM_PER_PAGE, $request->all());
+        $data['breadcrumbs'] = $this->breadcrumb->get('admin.dashboard.posts');
         return view('backend.posts.index', $data);
     }
 
