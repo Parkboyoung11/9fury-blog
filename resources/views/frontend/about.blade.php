@@ -2,10 +2,7 @@
 
 @section('content')
     <div class="row">
-        <div class="col-lg-2">
-
-        </div>
-        <div class="col-lg-10">
+        <div class="col-lg-10 offset-1">
             <p>My name is <strong>Moh. Ibrahim Al Naz Rana</strong> from Khulna, Bangladesh. I am a CSE postgraduate and
                 I am also a full stack web developer. I love programming, travelling, reading books and learning new
                 things.</p>
