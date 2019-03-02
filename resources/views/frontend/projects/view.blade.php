@@ -11,9 +11,9 @@
                 <a style="text-decoration: none" href="http://akii.tk/pX1SsW" target="_blank">web novel version</a></p>
             <h4>Light Novels</h4>
             <ul>
-                <li><a style="text-decoration: none" href="{{ route('lightnovel.show', 'sword-art-online') }}">Sword Art Online ( ソードアート・オンライン )</a></li>
+                <li><a style="text-decoration: none" href="{{ route('lightnovel.overview', 'sword-art-online') }}">Sword Art Online ( ソードアート・オンライン )</a></li>
                 <li><a style="text-decoration: none" href="http://akii.tk/pX1SsW" target="_blank">I Shaved. Then I Brought a High School Girl Home</a></li>
-                <li><a style="text-decoration: none" href="{{ route('lightnovel.show', 'hige-wo-soru') }}">ひげを剃る。そして女子高生を拾う</a></li>
+                <li><a style="text-decoration: none" href="{{ route('lightnovel.overview', 'hige-wo-soru') }}">ひげを剃る。そして女子高生を拾う</a></li>
             </ul>
             <p>
 
