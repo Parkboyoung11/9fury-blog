@@ -20,6 +20,7 @@
             </div>
         </div>
     </div>
+    {{--
     <div class="row mt-5">
         <div class="col-lg-8 col-md-10 mx-auto">
             <h4 class="mb-5">{{ __('Comments') }}</h4>
@@ -34,7 +35,7 @@
 
                     <div class="form-group">
                         {{ Form::label('email',__('Email')) }}
-                        {{ Form::email('email',get_email_for_comment_form(),['class'=> $errors->has('email') ? 'form-control is-invalid' : 'form-control'','required']) }}
+                        {{ Form::email('email',get_email_for_comment_form(),['class'=> $errors->has('email') ? 'form-control is-invalid' : 'form-control','required']) }}
                         <span class="invalid-feedback">{{ $errors->first('email') }}</span>
                     </div>
 
@@ -85,6 +86,7 @@
             </div>
         </div>
     </div>
+    --}}
 @endsection
 
 @section('script')

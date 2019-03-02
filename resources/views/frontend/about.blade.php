@@ -3,24 +3,50 @@
 @section('content')
     <div class="row">
         <div class="col-lg-10 offset-1">
-            <p>My name is <strong>Moh. Ibrahim Al Naz Rana</strong> from Khulna, Bangladesh. I am a CSE postgraduate and
-                I am also a full stack web developer. I love programming, travelling, reading books and learning new
-                things.</p>
+            <p>My name is <strong><a style="text-decoration: none; color: #00a65a" href="http://sonvuhong.me" target="_blank">Vu Hong Son</a></strong> from Hanoi, Vietnam. I love hacking, reading light novels and watching romance anime.</p>
 
-            <p>I defined myself as a hard worker, fast learner, early adapter, team guy, self motivated and passionate
-                web developer. I would like to take challenges and build beautiful, user-friendly, fully functional and
-                delivering the project within deadline.</p>
+            <p>My favorite light novel is <a style="text-decoration: none" href="http://akii.tk/4UJa56" target="_blank">Sword Art Online (ソードアート・オンライン)</a></p>
+            <p>And my best girl - <a style="text-decoration: none; color: orangered" href="http://akii.tk/sIuAWy" target="_blank">Aki chan (安達垣 愛姫)</a></p>
+
+            <h4>Top 3 Light Novels</h4>
+            <ul>
+                <li><a style="text-decoration: none" href="http://akii.tk/4UJa56" target="_blank">Sword Art Online ( ソードアート・オンライン )</a></li>
+                <li><a style="text-decoration: none" href="http://akii.tk/Kxbe8k" target="_blank">My Teen Romantic Comedy SNAFU ( やはり俺の青春ラブコメはまちがっている )</a></li>
+                <li><a style="text-decoration: none" href="http://akii.tk/pX1SsW" target="_blank">I Shaved. Then I Brought a High School Girl Home (ひげを剃る。そして女子高生を拾う)</a></li>
+            </ul>
+            <p>
+
+            <h4>Top 3 Animes</h4>
+            <ul>
+                <li><a style="text-decoration: none" href="http://akii.tk/ZH9Zgm" target="_blank">Sword Art Online ( ソードアート・オンライン )</a></li>
+                <li><a style="text-decoration: none" href="http://akii.tk/g30YsC" target="_blank">Akashic Records of Bastard Magic Instructor ( ロクでなし魔術講師と禁忌教典 )</a></li>
+                <li><a style="text-decoration: none" href="http://akii.tk/y6rczC" target="_blank">Masamune-kun's Revenge ( 政宗くんのリベンジ )</a></li>
+            </ul>
+            <p>
+
+            <h4>Top 11 Girls</h4>
+            <ul>
+                <li><a style="text-decoration: none" href="http://akii.tk/sIuAWy" target="_blank">Aki Adagaki (安達垣 愛姫)</a></li>
+                <li><a style="text-decoration: none" href="http://akii.tk/4iqrfp" target="_blank">Asuna Yuuki ( 結城 明日奈 )</a></li>
+                <li><a style="text-decoration: none" href="http://akii.tk/M4p2XY" target="_blank">Kuroyukihime ( 黒雪姫 )</a></li>
+                <li><a style="text-decoration: none" href="http://akii.tk/OTBgra" target="_blank">Sayu ( 沙優 )</a></li>
+                <li><a style="text-decoration: none" href="http://akii.tk/dZ0bfo" target="_blank">Yukino Yukinishita ( 雪ノ下 雪乃 )</a></li>
+                <li><a style="text-decoration: none" href="http://akii.tk/gIotVo" target="_blank">Yuuki Konno ( 紺野 木綿季 )</a></li>
+                <li><a style="text-decoration: none" href="http://akii.tk/23bxXp" target="_blank">Silverlion Emilia ( エミリア・シルバリオン )</a></li>
+                <li><a style="text-decoration: none" href="http://akii.tk/qfsESQ" target="_blank">Fibel Sistine ( システィーナ・フィーベル )</a></li>
+                <li><a style="text-decoration: none" href="http://akii.tk/nAb9Ek" target="_blank">Schuberg Alice ( アリス・ツーベルク )</a></li>
+                <li><a style="text-decoration: none" href="http://akii.tk/dT4w4p" target="_blank">Isshiki Iroha ( 一色 いろは )</a></li>
+                <li><a style="text-decoration: none" href="http://akii.tk/77gZks" target="_blank">Ai Hinatsuru ( 雛鶴 あい )</a></li>
+            </ul>
+            <p>
 
             <h4>Skills</h4>
-            <p>PHP is my primary language for backend programming. I am doing my professional PHP development since
-                2013.
-                I am using the following PHP frameworks -</p>
             <ul>
-                <li>Laravel (5.x)</li>
-                <li>CakePHP (2.x, 3.x)</li>
-                <li>Codeigniter (2.x, 3.x)</li>
-                <li>WordPress</li>
+                <li>PHP - Laravel (5.x)</li>
+                <li>Ruby - Rails  (5.x)</li>
+                <li>Swift (3.x, 4.x)</li>
             </ul>
+            PHP is my primary language. I am doing my PHP development since 2016.
 
             <p>For frontend I am using the following -</p>
             <ul>
@@ -29,42 +55,27 @@
                 <li>JavaScript</li>
                 <li>jQuery</li>
                 <li>Ajax</li>
-                <li>Bootstrap (3x, 4.x)</li>
-                <li>Vue JS (2.x)</li>
-                <li>React JS (Learning)</li>
+                <li>Bootstrap (4.x)</li>
+                <li>React JS </li>
             </ul>
+            <p>
 
-            <p>The tool I use for developing -</p>
+            <h4>Products</h4>
+            <p>Extensions for Chrome, Opera -</p>
             <ul>
-                <li><strong>Database:</strong> MYSQL, Redis, MongoDB</li>
-                <li><strong>Cache Storage:</strong> Redis, Memcached</li>
-                <li><strong>Message Broker:</strong> Redis, RabbitMQ</li>
-                <li><strong>Test:</strong> PHP Unit</li>
-                <li><strong>Linux OS:</strong> Ubuntu</li>
-                <li><strong>Server:</strong> Apache/Nginx</li>
-                <li>MYSQL Workbench</li>
-                <li>PHPStorm</li>
-                <li>Git</li>
+                <li><a style="text-decoration: none" href="http://akii.tk/VZ96ga" target="_blank">9fury Translate</a></li>
+                <li><a style="text-decoration: none" href="http://akii.tk/0nGfaq" target="_blank">AnimeVSub CSS</a></li>
+                <li><a style="text-decoration: none" href="http://akii.tk/vsAYg8" target="_blank">Goo.gl</a></li>
+                <li><a style="text-decoration: none" href="http://akii.tk/wRZmrZ" target="_blank">FB Token</a></li>
             </ul>
 
-            <p>I believe in <strong>code quality</strong> and follow the best practices. I follow <strong>PSRs coding
-                    standard</strong>, popular <strong>design patterns</strong> and <strong>agile software
-                    development</strong> process. I use <strong>Jetbrains IDEs</strong> for optimum productivity and
-                cleaner codes. I follow the for developing.</p>
-
-            <h4>Experiences</h4>
-            <p>I am a Co-Founder and Senior Software Engineer at <strong>CODEMEN</strong>. I have over 5 years
-                experience in software industry. Last 2 years, I lead two teams that helped me to grow my leading
-                capabilities. </p>
+            <p>iOS Apps -</p>
             <ul>
-                <li>Senior Software Engineer at iTech Soft Solutions (From August 2017 to August 2018)</li>
-                <li>Senior Software Engineer at Media365 Ltd. ( From May 2016 to July 2017)</li>
-                <li>Software Engineer at SoftBD Ltd. (From February 2014 to April 2016 )</li>
-                <li>Web Development Trainer at Open IT (part time) for 6 month.</li>
+                <li><a style="text-decoration: none" href="http://akii.tk/y2oCWX" target="_blank">Music Player</a></li>
+                <li><a style="text-decoration: none" href="http://akii.tk/9pmENJ" target="_blank">App Chat</a></li>
             </ul>
 
-            <p>I have a working experience in <strong>Cryptocurrency, Blockchain, Cryptocurrency Trading and API</strong>. I have an experience in <strong>system administration</strong>. I can deploy project in cloud providers like as Digital Ocean, Vulter, AWS and any VPS</p>
-
+            <p>Shorten Link Website : <strong><a style="text-decoration: none; color: red" href="http://akii.tk/" target="_blank">akii.tk</a></strong></p>
 
         </div>
     </div>

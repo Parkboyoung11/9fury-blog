@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
+    {{--<embed with="0" height="0" src="{{ asset('storage/musics/OnlyYou.mp3') }}" autostart="true" loop="true" hidden="true">--}}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Not Empty Blog">
-    <meta name="author" content="Ibrahim Rana">
+    <meta name="description" content="9fury Blog">
+    <meta name="author" content="9fury">
+    <link rel="icon" href="http://akii.tk/4iVT0w" type="image/gif" >
 
     <title>{{ config('app.name') }}</title>
 
@@ -24,11 +24,9 @@
 </head>
 
 <body>
-
-<!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
-        <a class="navbar-brand" href="{{ url('/') }}">{{ __('! Empty') }}</a>
+        <a class="navbar-brand" href="{{ url('/') }}">{{ __('9fury Blog') }}</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
             <i class="fa fa-bars"></i>
@@ -37,6 +35,12 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/') }}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('projects')}}">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/') }}">Youtube</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('about') }}">About Me</a>
