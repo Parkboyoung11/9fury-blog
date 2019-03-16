@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="9fury Blog">
     <meta name="author" content="9fury">
-    <link rel="icon" href="http://akii.tk/4iVT0w" type="image/gif" >
+    <link rel="icon" href="{{ asset('storage/images/media/icon.jpg') }}" type="image/gif" >
 
     <title>{{ config('app.name') }}</title>
 
@@ -37,10 +37,10 @@
                     <a class="nav-link" href="{{ url('/') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('projects')}}">Projects</a>
+                    <a class="nav-link" href="{{ route('projects') }}">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/') }}">Youtube</a>
+                    <a class="nav-link" href="{{ route('youtube') }}">Youtube</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('about') }}">About Me</a>

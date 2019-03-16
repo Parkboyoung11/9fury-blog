@@ -27,7 +27,15 @@ class LightNovelController extends Controller
             $part_index = $request->input('p');
             $volume_index = $request->input('v');
             $result = $lightnovel->getPart(str_replace("-","", $name), $volume_index, $part_index);
+            $number_parts = $lightnovel->getNumberPart(str_replace("-","", $name), $volume_index);
+            $number_volumes = $lightnovel->getNumberVolume(str_replace("-","", $name));
+            $number_parts_previous = $lightnovel->getNumberPart(str_replace("-","", $name), $volume_index - 1);
             $data['part'] = $result ;
+            $data['number_parts'] = $number_parts ;
+            $data['number_volumes'] = $number_volumes ;
+            $data['current_part'] = $part_index ;
+            $data['current_volume'] = $volume_index ;
+            $data['number_parts_previous'] = $number_parts_previous ;
             return view('frontend.projects.lightnovel.content', $data);
         }else {
             $overview = array();

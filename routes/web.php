@@ -26,6 +26,13 @@ Route::group(['prefix' => 'projects'], function () {
     Route::group(['namespace' => 'Projects'], function () {
         Route::view('/', 'frontend.projects.view')->name('projects');
         Route::get('/lightnovel/{name}', 'LightNovelController@overview')->name('lightnovel.overview');
+        Route::get('/manga/{name}', 'MangaController@overview')->name('manga.overview');
+    });
+});
+
+Route::group(['prefix' => 'youtube'], function () {
+    Route::group(['namespace' => 'Youtube'], function () {
+        Route::view('/', 'frontend.youtube.view')->name('youtube');
     });
 });
 

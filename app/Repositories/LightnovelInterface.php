@@ -22,4 +22,7 @@ interface LightnovelInterface
 
     public function getPart($name, $volume_index, $part_index);
 
+    public function getNumberPart($name, $volume_index);
+
+    public function getNumberVolume($name);
 }

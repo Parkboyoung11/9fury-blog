@@ -51,4 +51,19 @@ class LightnovelRepository implements LightnovelInterface
             ['part_index', $part_index],
         ])->first();
     }
+
+    public function getNumberPart($name, $volume_index) {
+        if ($record = $this->model->where([
+            ['ln_name', $name],
+            ['volume_index', $volume_index]
+        ])->orderBy('part_index', 'desc')->first())
+            return $record->part_index;
+        return 0;
+    }
+
+    public function getNumberVolume($name) {
+        if ($record = $this->model->where('ln_name', $name)->orderBy('volume_index', 'desc')->first())
+            return $record->volume_index;
+        return 0;
+    }
 }

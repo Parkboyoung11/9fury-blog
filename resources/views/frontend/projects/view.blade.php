@@ -19,7 +19,7 @@
 
             <h4>Manga</h4>
             <ul>
-                <li><a style="text-decoration: none" href="http://akii.tk/y6rczC" target="_blank">Masamune-kun's Revenge ( 政宗くんのリベンジ )</a></li>
+                <li><a style="text-decoration: none" href="{{ route('manga.overview', 'masamune-kun-no-revenge') }}">Masamune-kun's Revenge ( 政宗くんのリベンジ )</a></li>
             </ul>
             <p>
 
